@@ -42,7 +42,7 @@ download_release() {
 	filename="$2"
 
 	# TODO: Adapt the release URL convention for xcresults
-	url="$GH_REPO/archive/v${version}.tar.gz"
+	url="$GH_REPO/releases/download/${version}/xcresults"
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
